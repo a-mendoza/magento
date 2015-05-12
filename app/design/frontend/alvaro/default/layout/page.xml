@@ -103,6 +103,7 @@
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>
                 <block type="page/html_welcome" name="welcome" as="welcome"/>
+                <block type="page/template_links" name="header_links" as="header_links" template="page/template/links.phtml"/>
             </block>
 
             <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
@@ -185,7 +186,6 @@
             <block type="core/text_list" name="content" as="content" translate="label">
                 <label>Main Content Area</label>
             </block>
-
         </block>
     </print>
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<layout version="0.1.0">
+    <default>
+        <remove name="footer.newsletter"></remove>
+        <reference name="footer_links">
+            <action method="addLink" translate="label">
+                <label>See Google</label>
+                <url>https://www.google.ca</url>
+                <position>4</position>
+            </action>
+        </reference>
+    </default>
+    <catalog_category_layered>
+        <reference name="root">
+            <remove name="catalog.compare.sidebar"></remove>
+        </reference>
+    </catalog_category_layered>
+    <cms_index_index>
+        <reference name="head">
+            <action method="removeItem">
+                <type>js</type>
+                <name>lib/ccard.js</name>
+            </action>
+        </reference>
+    </cms_index_index>
+    <CATEGORY_10>
+        <!-- Je ne sais pas comment "créer un nouveau block simple avec 3 variables défini..." -->
+        <reference name="right">
+            <block before="-" type="cms/block" name="footer_social_links_right">
+                <action method="setBlockId">
+                    <block_id>footer_links_sm</block_id>
+                </action>
+            </block>
+            <block type="core/template" name="left.permanent.callout" template="callouts/left_col.phtml">/
+                <action method="setImgSrc">
+                    <src>images/media/col_left_callout.jpg</src>
+                </action>
+                <action method="setImgAlt" translate="alt" module="catalog">
+                    <alt>Our customer service is available 24/7. Call us at (555) 555-0123.</alt>
+                </action>
+                <action method="setLinkUrl">
+                    <url>checkout/cart</url>
+                </action>
+            </block>
+        </reference>
+    </CATEGORY_10>
+    <CATEGORY_14>
+        <update handle="CATEGORY_10">
+
+        </update>
+    </CATEGORY_14>
+</layout>

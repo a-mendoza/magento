@@ -38,6 +38,13 @@
                 <url helper="catalogsearch/getSearchTermUrl" />
                 <title>Search Terms</title>
             </action>
+            <!-- <action method="addLink" translate="label title" module="catalogsearch">
+                <label>Advanced Search</label>
+                <url helper="catalogsearch/getAdvancedSearchUrl" />
+                <title>Advanced Search</title>
+            </action> -->
+        </reference>
+        <reference name="header_links">
             <action method="addLink" translate="label title" module="catalogsearch">
                 <label>Advanced Search</label>
                 <url helper="catalogsearch/getAdvancedSearchUrl" />
